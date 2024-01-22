@@ -1,7 +1,5 @@
 # DoneWithIt - React Native Practice Project
 
-![DoneWithIt Logo](link/to/logo.png)
-
 Welcome to DoneWithIt, a React Native practice project that I am working on to explore and learn the ins and outs of mobile app development with React Native. This repository serves as a learning playground where I experiment with various React Native concepts, implement different features, and refine my skills.
 
 ## Project Overview
@@ -47,4 +45,4 @@ As this project is primarily for personal learning, contributions are not active
 
 ## License
 
-DoneWithIt is an open-source project released under the [MIT License](LICENSE). Enjoy exploring and happy coding! 🚀
+DoneWithIt is an open-source project released under the MIT License. Enjoy exploring and happy coding! 🚀
