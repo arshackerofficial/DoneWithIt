@@ -2,6 +2,7 @@ import React from "react";
 import { FlatList, View } from "react-native";
 import ListItem from "../components/ListItem";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
+import Screen from "../components/Screen";
 
 const messages = [
   {
@@ -20,19 +21,21 @@ const messages = [
 
 function MessagesScreen(props) {
   return (
-    <FlatList
-      data={messages}
-      keyExtractor={(message) => message.id.toString()}
-      renderItem={({ item }) => (
-        <ListItem
-          title={item.title}
-          subTitle={item.description}
-          image={item.image}
-          onPress={() => console.log("i got clicked", item.title)}
-          renderRightActions={ListItemDeleteAction}
-        />
-      )}
-    />
+    <Screen>
+      <FlatList
+        data={messages}
+        keyExtractor={(message) => message.id.toString()}
+        renderItem={({ item }) => (
+          <ListItem
+            title={item.title}
+            subTitle={item.description}
+            image={item.image}
+            onPress={() => console.log("i got clicked", item.title)}
+            renderRightActions={ListItemDeleteAction}
+          />
+        )}
+      />
+    </Screen>
   );
 }
 

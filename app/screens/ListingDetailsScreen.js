@@ -4,10 +4,11 @@ import AppText from "../components/AppText";
 
 import ListItem from "../components/ListItem";
 import colors from "../config/colors";
+import Screen from "../components/Screen";
 
 function ListingDetailsScreen(props) {
   return (
-    <View>
+    <Screen>
       <Image style={styles.image} source={require("../assets/jacket.jpg")} />
       <View style={styles.detailsContainer}>
         <AppText style={styles.title}>Red jacket for sale</AppText>
@@ -20,7 +21,7 @@ function ListingDetailsScreen(props) {
           />
         </View>
       </View>
-    </View>
+    </Screen>
   );
 }
 
