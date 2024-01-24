@@ -1,12 +1,19 @@
-import React from "react";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
+import React, { useState } from "react";
 
-import MessagesScreen from "./app/screens/MessagesScreen";
+import Screen from "./app/components/Screen";
+import { Switch } from "react-native";
 
 export default function App() {
+  const [isNew, setIsNew] = useState(false);
   return (
-    <GestureHandlerRootView>
-      <MessagesScreen />
-    </GestureHandlerRootView>
+    <Screen>
+      <Switch
+        value={isNew}
+        onValueChange={(newValue) => {
+          setIsNew(newValue);
+          console.log(newValue);
+        }}
+      />
+    </Screen>
   );
 }

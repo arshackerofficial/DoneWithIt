@@ -22,6 +22,8 @@ const initialMessages = [
 
 function MessagesScreen(props) {
   const [messages, setMessages] = useState(initialMessages);
+  const [isRefreshing, setRefreshing] = useState(false);
+
   const handleDelete = (message) => {
     //Delete Message from aray
     setMessages(messages.filter((m) => m.id !== message.id));
@@ -44,6 +46,10 @@ function MessagesScreen(props) {
           />
         )}
         ItemSeparatorComponent={ListItemSeporator}
+        refreshing={isRefreshing}
+        onRefresh={() => {
+          setMessages(initialMessages);
+        }}
       />
     </Screen>
   );
