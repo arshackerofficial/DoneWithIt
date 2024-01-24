@@ -2,13 +2,10 @@ import React from "react";
 import { SafeAreaView } from "react-native";
 import Constants from "expo-constants";
 
-function Screen({ children, style, ...props }) {
+function Screen({ children, style }) {
   return (
-    <SafeAreaView
-      style={[{ paddingTop: Constants.statusBarHeight }, style]}
-      props
-    >
-      children
+    <SafeAreaView style={[{ paddingTop: Constants.statusBarHeight }, style]}>
+      {children}
     </SafeAreaView>
   );
 }

@@ -5,7 +5,7 @@ import MessagesScreen from "./app/screens/MessagesScreen";
 
 export default function App() {
   return (
-    <GestureHandlerRootView style={{ marginTop: 60 }}>
+    <GestureHandlerRootView>
       <MessagesScreen />
     </GestureHandlerRootView>
   );
