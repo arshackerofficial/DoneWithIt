@@ -1,19 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-import Screen from "./app/components/Screen";
-import { Switch } from "react-native";
+import LoginScreen from "./app/screens/LoginScreen";
 
 export default function App() {
-  const [isNew, setIsNew] = useState(false);
-  return (
-    <Screen>
-      <Switch
-        value={isNew}
-        onValueChange={(newValue) => {
-          setIsNew(newValue);
-          console.log(newValue);
-        }}
-      />
-    </Screen>
-  );
+  return <LoginScreen />;
 }
