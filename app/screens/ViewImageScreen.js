@@ -3,11 +3,10 @@ import { Image, StyleSheet, View } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from "../config/colors";
-import Screen from "../components/Screen";
 
 function ViewImageScreen(props) {
   return (
-    <Screen style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.closeIcon}>
         <MaterialCommunityIcons name="close" color="white" size={35} />
       </View>
@@ -23,7 +22,7 @@ function ViewImageScreen(props) {
         style={styles.image}
         source={require("../assets/chair.jpg")}
       />
-    </Screen>
+    </View>
   );
 }
 
